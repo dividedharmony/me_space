@@ -2,7 +2,9 @@
   <div>
     <Navigation />
     <Profile />
-    <Nuxt />
+    <div class="page-contents">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
@@ -24,5 +26,9 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.page-contents {
+  margin-top: 60px;
 }
 </style>
