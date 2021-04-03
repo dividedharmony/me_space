@@ -10,8 +10,9 @@
 
 <style lang="scss" scoped>
 .profile {
-  margin: 20px;
+  margin: 10px;
   position: fixed;
+  top: 60px;
 }
 
 .profile-image {

@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" type="dark" variant="info">
+  <b-navbar fixed="top" toggleable="lg" type="dark" variant="info">
     <b-navbar-brand>
       <NuxtLink to="/" class="brand-link"> davidharmon.io </NuxtLink>
     </b-navbar-brand>
