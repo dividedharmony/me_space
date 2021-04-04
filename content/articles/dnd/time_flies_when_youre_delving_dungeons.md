@@ -1,6 +1,7 @@
 ---
 title: Time Flies When You're Delving Dungeons
 description: 'Tactics are tested as timelines shift and continuums converge in a dungeon where death is temporary and time itself is the enemy. Only the adventurers can capture the hands of time and steer the future away from certain doom.'
+rank: 3
 ---
 
 Tactics are tested as timelines shift and continuums converge in a dungeon where death is temporary and time itself is the enemy. Only the adventurers can capture the hands of time and steer the future away from certain doom.

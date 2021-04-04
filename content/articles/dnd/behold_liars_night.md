@@ -1,6 +1,7 @@
 ---
 title: BEHOLD! Liar's Night
 description: 'Halloween-themed adventures, magic items, spells, familiars, and more!'
+rank: 6
 ---
 
 *"Ah yes. Well! Adventurers! Adventures are here, here at my very own home. And on Liar's Night, of all nights! Did you think I would not have expected you? Did you think I did not prepare for this? Do you believe, as you may, that I have crawled inside this carved gourd because I had let my guard down? Ha! Ha. Haaaa. You see, this is all happening exactly as I have planned it. You never had a chance!*

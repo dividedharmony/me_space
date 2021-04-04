@@ -24,13 +24,13 @@ export default {
     try {
       const articles = await $content('articles/dnd')
         .only(['title', 'description'])
+        .sortBy('rank')
         .fetch()
       articles.forEach((article) => {
         if (article.path) {
           article.href = article.path.replace('articles/', '')
         }
       })
-      console.log('ARTICLES', articles)
       return {
         articles,
       }
