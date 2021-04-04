@@ -1,5 +1,5 @@
 <template>
-  <h1 :is="`h${level}`" :class="['headline', sizeCssClass]">
+  <h1 :is="`h${level}`" :class="cssClasses">
     <slot />
   </h1>
 </template>
@@ -30,10 +30,26 @@ export default {
         return !!SIZES[value]
       },
     },
+    decorations: {
+      type: Array,
+      default() {
+        return []
+      },
+      validator: (values) => {
+        return values.every((value) => {
+          return [null, 'italic', 'bold', 'underline'].includes(value)
+        })
+      },
+    },
   },
   computed: {
-    sizeCssClass() {
-      return SIZES[this.size]
+    cssClasses() {
+      const klasses = ['headline']
+      klasses.push(SIZES[this.size])
+      this.decorations.forEach((decoration) => {
+        klasses.push(`h--${decoration}`)
+      })
+      return klasses
     },
   },
 }
@@ -44,9 +60,21 @@ export default {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
-  font-weight: 300;
+  font-weight: normal;
   color: #35495e;
   letter-spacing: 1px;
+
+  &.h--italic {
+    font-style: italic;
+  }
+
+  &.h--underline {
+    text-decoration: underline;
+  }
+
+  &.h--bold {
+    font-weight: bold;
+  }
 
   &.size-zero {
     font-size: 300px;

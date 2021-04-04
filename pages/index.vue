@@ -2,6 +2,10 @@
   <Container>
     <div class="intro">
       <Headline>David Harmon</Headline>
+      <Headline :level="2" :size="4" :decorations="['italic']">
+        Software Developer, Dungeons &amp; Dragons Writer, and Community
+        Organizer
+      </Headline>
     </div>
     <div class="intro-text">
       <p>
