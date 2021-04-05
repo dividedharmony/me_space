@@ -1,6 +1,7 @@
 ---
 title: As Above, So Below
 description: 'A lottery held under suspicious circumstances. A Paladin trying to do the right thing. Can the adventurers find the truth in time?'
+image: "https://storage.googleapis.com/davidharmonioassets/as_above.jpeg"
 rank: 3
 parent:
   name: "D&D"

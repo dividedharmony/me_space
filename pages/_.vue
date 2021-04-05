@@ -6,7 +6,13 @@
         <Headline :size="2">{{ article.title }}</Headline>
       </div>
       <div class="below-fold">
-        <nuxt-content :document="article" />
+        <img
+          v-if="article.image"
+          :src="article.image"
+          :alt="article.title"
+          class="article-image"
+        />
+        <nuxt-content class="article-body" :document="article" />
       </div>
     </div>
   </Container>
@@ -35,3 +41,11 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.article-image {
+  display: inline-block;
+  width: 100px;
+  margin: 10px 10px 10px 0;
+}
+</style>

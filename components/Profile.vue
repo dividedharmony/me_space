@@ -2,7 +2,7 @@
   <aside class="profile">
     <img
       class="profile-image"
-      src="~/assets/images/me.jpeg"
+      src="https://storage.googleapis.com/davidharmonioassets/me.jpeg"
       alt="David Harmon"
     />
     <ul class="social-media-links">

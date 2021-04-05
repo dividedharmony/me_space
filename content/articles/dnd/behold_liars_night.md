@@ -2,6 +2,7 @@
 title: BEHOLD! Liar's Night
 description: 'Halloween-themed adventures, magic items, spells, familiars, and more!'
 rank: 6
+image: "https://storage.googleapis.com/davidharmonioassets/behold.png"
 parent:
   name: "D&D"
   href: "/dnd"
