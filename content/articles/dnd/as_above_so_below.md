@@ -2,6 +2,9 @@
 title: As Above, So Below
 description: 'A lottery held under suspicious circumstances. A Paladin trying to do the right thing. Can the adventurers find the truth in time?'
 rank: 3
+parent:
+  name: "D&D"
+  href: "/dnd"
 ---
 
 A lottery held under suspicious circumstances. A Paladin trying to do the right thing. Can the adventurers find the truth in time?

@@ -1,10 +1,13 @@
 <template>
   <Container>
-    <div v-if="!!article" class="above-fold">
-      <Headline :size="2">{{ article.title }}</Headline>
-    </div>
-    <div class="below-fold">
-      <nuxt-content :document="article" />
+    <div v-if="!!article" class="loaded-article">
+      <Breadcrumb v-if="parent" :name="parent.name" :href="parent.href" />
+      <div class="above-fold">
+        <Headline :size="2">{{ article.title }}</Headline>
+      </div>
+      <div class="below-fold">
+        <nuxt-content :document="article" />
+      </div>
     </div>
   </Container>
 </template>
@@ -16,6 +19,7 @@ export default {
       const article = await $content(`articles/${params.pathMatch}`).fetch()
       return {
         article,
+        parent: article.parent,
       }
     } catch (e) {
       // eslint-disable-next-line no-console
@@ -26,6 +30,7 @@ export default {
   data() {
     return {
       article: null,
+      parent: null,
     }
   },
 }

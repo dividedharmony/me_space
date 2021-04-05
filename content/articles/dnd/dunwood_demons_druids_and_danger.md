@@ -2,6 +2,9 @@
 title: 'Dunwood - Demons, Druids, & Danger'
 description: 'Welcome To Dunwood - A land filled with Demons, Druids, and Danger!'
 rank: 5
+parent:
+  name: "D&D"
+  href: "/dnd"
 ---
 
 Welcome To Dunwood - A land filled with Demons, Druids, and Danger!
