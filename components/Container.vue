@@ -8,13 +8,11 @@
 
 <style lang="scss" scoped>
 .container-wrapper {
-  margin: 0 auto;
+  margin: 20px auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
 }
 .container-inner {
   max-width: 750px;
