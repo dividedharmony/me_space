@@ -3,7 +3,7 @@
     <div class="above-fold">
       <Headline :size="2">Dungeons &amp; Dragons</Headline>
       <Headline :level="2" :size="4" :decorations="['italic']"
-        >Adventures and Suppliments Written by David Harmon</Headline
+        >Adventures and Supplements Written by David Harmon</Headline
       >
     </div>
     <div class="below-fold">
