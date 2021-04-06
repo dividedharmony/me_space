@@ -20,23 +20,20 @@
 
 <script>
 export default {
-  async asyncData({ $content, params, error }) {
-    try {
-      const article = await $content(`articles/${params.pathMatch}`).fetch()
-      return {
-        article,
-        parent: article.parent,
-      }
-    } catch (e) {
-      // eslint-disable-next-line no-console
-      console.error(e)
-      error({ statusCode: 404, message: 'Page not found!' })
-    }
-  },
   data() {
     return {
       article: null,
       parent: null,
+    }
+  },
+  async fetch() {
+    try {
+      const article = await this.$content(`articles${this.$route.path}`).fetch()
+      this.article = article
+      this.parent = article.parent
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error(e)
     }
   },
 }

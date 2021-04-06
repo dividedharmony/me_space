@@ -20,9 +20,14 @@
 
 <script>
 export default {
-  async asyncData({ $content }) {
+  data() {
+    return {
+      articles: [],
+    }
+  },
+  async fetch() {
     try {
-      const articles = await $content('articles/dnd')
+      const articles = await this.$content('articles/dnd')
         .only(['title', 'description'])
         .sortBy('rank')
         .fetch()
@@ -31,20 +36,10 @@ export default {
           article.href = article.path.replace('articles/', '')
         }
       })
-      return {
-        articles,
-      }
+      this.articles = articles
     } catch (e) {
       // eslint-disable-next-line no-console
       console.error(e)
-      return {
-        articles: [],
-      }
-    }
-  },
-  data() {
-    return {
-      articles: [],
     }
   },
 }
