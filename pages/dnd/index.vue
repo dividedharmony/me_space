@@ -9,7 +9,7 @@
     <div class="below-fold">
       <ul class="articles">
         <li v-for="article in articles" :key="article.href">
-          <NuxtLink :to="article.href">
+          <NuxtLink :to="article.href || '#'">
             {{ article.title }}
           </NuxtLink>
         </li>
@@ -28,7 +28,7 @@ export default {
   async fetch() {
     try {
       const articles = await this.$content('articles/dnd')
-        .only(['title', 'description'])
+        .only(['title', 'description', 'path', 'rank'])
         .sortBy('rank')
         .fetch()
       articles.forEach((article) => {
