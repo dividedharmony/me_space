@@ -3,13 +3,13 @@
     <div class="above-fold">
       <Headline :size="2">Dungeons &amp; Dragons</Headline>
       <Headline :level="2" :size="4" :decorations="['italic']"
-        >Adventures and Suppliments Written by David Harmon</Headline
+        >Adventures and Supplements Written by David Harmon</Headline
       >
     </div>
     <div class="below-fold">
       <ul class="articles">
         <li v-for="article in articles" :key="article.href">
-          <NuxtLink :to="article.href">
+          <NuxtLink :to="article.href || '#'">
             {{ article.title }}
           </NuxtLink>
         </li>
@@ -20,10 +20,15 @@
 
 <script>
 export default {
-  async asyncData({ $content }) {
+  data() {
+    return {
+      articles: [],
+    }
+  },
+  async fetch() {
     try {
-      const articles = await $content('articles/dnd')
-        .only(['title', 'description'])
+      const articles = await this.$content('articles/dnd')
+        .only(['title', 'description', 'path', 'rank'])
         .sortBy('rank')
         .fetch()
       articles.forEach((article) => {
@@ -31,20 +36,10 @@ export default {
           article.href = article.path.replace('articles/', '')
         }
       })
-      return {
-        articles,
-      }
+      this.articles = articles
     } catch (e) {
       // eslint-disable-next-line no-console
       console.error(e)
-      return {
-        articles: [],
-      }
-    }
-  },
-  data() {
-    return {
-      articles: [],
     }
   },
 }
