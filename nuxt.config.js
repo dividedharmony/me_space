@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'me_space',
+    title: 'David Harmon - Software Developer and D&D Writer',
     htmlAttrs: {
       lang: 'en',
     },
