@@ -2,6 +2,9 @@
 title: Super Pokécord
 description: 'A Ruby-based Discord bot that allows users to play a Pokémon-like game.'
 rank: 2
+parent:
+  name: "Programming"
+  href: "/programming"
 ---
 
 This bot is inspired by the original [Pokécord Discord bot](https://www.distractify.com/p/what-happened-to-pokecord) that was discontinued and shut-down in mid-2020. The source code was never made publicly available so any copies must be recreated from scratch.

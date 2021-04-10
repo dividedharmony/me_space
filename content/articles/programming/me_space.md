@@ -2,6 +2,9 @@
 title: me_space
 description: 'A Vue.js web application that utilizes the NuxtJS framework.'
 rank: 1
+parent:
+  name: "Programming"
+  href: "/programming"
 ---
 
 This [Vue.js](https://vuejs.org/) web application is the code that powers the [davidharmon.io](https://www.davidharmon.io) website. Using the [NuxtJS](https://nuxtjs.org/) framework, `me_space` has the look and feel of a Single-Page Application but is statically generated, improving SEO and performance.
