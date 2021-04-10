@@ -9,8 +9,12 @@
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item href="#"> Software Developer </b-nav-item>
-        <b-nav-item href="#">
+        <b-nav-item>
+          <NuxtLink to="/programming" class="undecorated">
+            Software Developer
+          </NuxtLink>
+        </b-nav-item>
+        <b-nav-item>
           <NuxtLink to="/dnd" class="undecorated"> D&amp;D Writer </NuxtLink>
         </b-nav-item>
       </b-navbar-nav>
