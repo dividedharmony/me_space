@@ -6,13 +6,31 @@
         <Headline :size="2">{{ article.title }}</Headline>
       </div>
       <div class="below-fold">
+        <a
+          v-if="article.external_url && article.image"
+          :href="article.external_url"
+        >
+          <img
+            :src="article.image"
+            :alt="article.title"
+            class="article-image"
+          />
+        </a>
         <img
-          v-if="article.image"
+          v-else-if="article.image"
           :src="article.image"
           :alt="article.title"
           class="article-image"
         />
         <nuxt-content class="article-body" :document="article" />
+      </div>
+      <div class="article-footer">
+        <a v-if="article.external_url" :href="article.external_url"> </a>
+        <Breadcrumb
+          v-if="article.external_url && article.external_location"
+          :name="externalLinkText"
+          :href="article.external_url"
+        />
       </div>
     </div>
   </Container>
@@ -28,13 +46,18 @@ export default {
   },
   async fetch() {
     try {
-      const article = await this.$content(`articles${this.$route.path}`).fetch()
+      const article = await this.$content('articles', this.$route.path).fetch()
       this.article = article
       this.parent = article.parent
     } catch (e) {
       // eslint-disable-next-line no-console
       console.error(e)
     }
+  },
+  computed: {
+    externalLinkText() {
+      return `See on ${this.article.external_location}`
+    },
   },
 }
 </script>
