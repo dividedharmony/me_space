@@ -3,6 +3,7 @@ title: BEHOLD! Liar's Night
 description: 'Halloween-themed adventures, magic items, spells, familiars, and more!'
 rank: 6
 external_url: https://www.dmsguild.com/product/290887/BEHOLD-Liars-Night
+external_location: DMsGuild
 image: "https://storage.googleapis.com/davidharmonioassets/behold.png"
 parent:
   name: "D&D"

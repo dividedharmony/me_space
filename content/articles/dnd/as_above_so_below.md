@@ -4,6 +4,7 @@ description: 'A lottery held under suspicious circumstances. A Paladin trying to
 image: "https://storage.googleapis.com/davidharmonioassets/as_above.jpeg"
 rank: 3
 external_url: https://www.dmsguild.com/product/351365/DCPoAGaryXIII04-As-Above-So-Below
+external_location: DMsGuild
 parent:
   name: "D&D"
   href: "/dnd"

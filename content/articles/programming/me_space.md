@@ -3,6 +3,7 @@ title: me_space
 description: 'A Vue.js web application that utilizes the NuxtJS framework.'
 rank: 1
 external_url: https://github.com/dividedharmony/me_space
+external_location: GitHub
 parent:
   name: "Programming"
   href: "/programming"
