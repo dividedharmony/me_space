@@ -2,6 +2,7 @@
 title: 'Dunwood - Demons, Druids, & Danger'
 description: 'Welcome To Dunwood - A land filled with Demons, Druids, and Danger!'
 rank: 5
+external_url: https://www.dmsguild.com/product/333652/Dunwood--Demons-Druids--Danger
 image: "https://storage.googleapis.com/davidharmonioassets/dunwood.jpeg"
 parent:
   name: "D&D"

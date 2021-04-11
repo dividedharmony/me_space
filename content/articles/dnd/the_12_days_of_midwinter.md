@@ -2,6 +2,7 @@
 title: 'The 12 Days of Midwinter'
 description: 'The 12 Days of Midwinter is a collection of Dungeons & Dragons adventures inspired by the mythology, traditions, and lore of the Winter season. This collection features ~200 pages of adventures designed for every Tier of play, for characters between levels 1 and 20.'
 rank: 7
+external_url: https://www.dmsguild.com/product/293593/The-12-Days-of-Midwinter
 image: "https://storage.googleapis.com/davidharmonioassets/midwinter.png"
 parent:
   name: "D&D"

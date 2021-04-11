@@ -2,6 +2,7 @@
 title: Super Pokécord
 description: 'A Ruby-based Discord bot that allows users to play a Pokémon-like game.'
 rank: 2
+external_url: https://github.com/dividedharmony/super_pokecord
 parent:
   name: "Programming"
   href: "/programming"
