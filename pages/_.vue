@@ -1,7 +1,7 @@
 <template>
   <Container>
     <div v-if="!!article" class="loaded-article">
-      <Breadcrumb v-if="parent" :name="parent.name" :href="parent.href" />
+      <Breadcrumb v-if="parent" :name="parent.name" :to="parent.href" />
       <div class="above-fold">
         <Headline :size="2">{{ article.title }}</Headline>
       </div>

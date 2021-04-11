@@ -1,6 +1,7 @@
 <template>
   <div class="breadcrumb">
-    <NuxtLink :to="href">{{ name }}</NuxtLink>
+    <NuxtLink v-if="to" :to="to">{{ name }}</NuxtLink>
+    <a v-else :href="href || '#'">{{ name }}</a>
   </div>
 </template>
 
@@ -11,9 +12,13 @@ export default {
       type: String,
       required: true,
     },
+    to: {
+      type: String,
+      default: null,
+    },
     href: {
       type: String,
-      required: true,
+      default: null,
     },
   },
 }
